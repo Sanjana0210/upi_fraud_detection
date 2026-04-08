@@ -1,0 +1,26 @@
+# CI-only dependencies — lightweight, no PySpark/Kafka/MongoDB needed for tests
+# Install with:  pip install -r requirements-ci.txt
+
+# ── Machine Learning ─────────────────────────────────────────────────────────
+scikit-learn==1.8.0
+imbalanced-learn==0.14.1
+joblib==1.5.3
+xgboost==3.2.0
+
+# ── Data / Numeric ───────────────────────────────────────────────────────────
+pandas==2.3.3
+numpy==2.4.2
+
+# ── Visualisation (needed for imports) ───────────────────────────────────────
+plotly==5.18.0
+matplotlib==3.10.8
+seaborn==0.13.2
+
+# ── Utilities ────────────────────────────────────────────────────────────────
+python-dotenv==1.0.0
+faker==40.8.0
+
+# ── Testing / Linting ────────────────────────────────────────────────────────
+pytest>=8.0
+pytest-cov>=5.0
+flake8>=7.0

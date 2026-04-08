@@ -40,6 +40,10 @@ def test_import_ml_evaluate():
 
 
 def test_import_spark_process():
-    """spark.process_data should import successfully."""
+    """spark.process_data should import successfully (skipped if PySpark not installed)."""
+    try:
+        import pyspark  # noqa: F401
+    except ImportError:
+        pytest.skip("PySpark not installed — skipping")
     import spark.process_data
     assert spark.process_data is not None

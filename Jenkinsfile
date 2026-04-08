@@ -10,6 +10,7 @@ pipeline {
         IMAGE_NAME     = 'upi-fraud-detection'
         IMAGE_TAG      = "${BUILD_NUMBER}"
         REPO_URL       = 'https://github.com/Sanjana0210/upi_fraud_detection.git'
+        PATH           = "/opt/homebrew/bin:/usr/local/bin:${env.PATH}"
     }
 
     options {
@@ -35,7 +36,7 @@ pipeline {
                     python3 -m venv ${VENV_DIR}
                     . ${VENV_DIR}/bin/activate
                     pip install --upgrade pip --quiet
-                    pip install -r requirements-dev.txt --quiet
+                    pip install -r requirements-ci.txt --quiet
                 '''
             }
         }
