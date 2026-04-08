@@ -1,7 +1,9 @@
-# CI-only dependencies — lightweight, no PySpark/Kafka/MongoDB needed for tests
+# CI-only dependencies — lightweight, no PySpark needed for tests
 # Install with:  pip install -r requirements-ci.txt
 
-# ── Machine Learning ─────────────────────────────────────────────────────────
+# ── Database / Streaming (imported at module level) ──────────────────────────
+pymongo==4.6.1
+kafka-python-ng
 scikit-learn==1.8.0
 imbalanced-learn==0.14.1
 joblib==1.5.3
