@@ -1,0 +1,42 @@
+[flake8]
+max-line-length = 120
+exclude =
+    .venv,
+    __pycache__,
+    .git,
+    build,
+    dist,
+    data,
+    *.egg-info
+ignore =
+    # whitespace before ':'  (conflicts with black-style alignment)
+    E203,
+    # line too long (handled by max-line-length, not strict)
+    E501,
+    # multiple imports on one line
+    E401,
+    # module level import not at top
+    E402,
+    # line break before binary operator
+    W503,
+    # line break after binary operator
+    W504,
+    # alignment spacing (used intentionally in project)
+    E221, E222, E225, E226, E231, E241, E271,
+    # blank line expectations
+    E302, E305,
+    # multiple statements on one line
+    E701, E702,
+    # bare except
+    E722,
+    # trailing whitespace / missing newline
+    W291, W292,
+    # unused imports (handled per-file below)
+    F401,
+    # f-string without placeholders
+    F541,
+    # unused variable
+    F841
+per-file-ignores =
+    # __init__.py files may have unused imports
+    __init__.py:F401
