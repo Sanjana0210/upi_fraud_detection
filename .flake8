@@ -2,12 +2,16 @@
 max-line-length = 120
 exclude =
     .venv,
+    .venv-*,
+    venv,
+    env,
     __pycache__,
     .git,
     build,
     dist,
     data,
-    *.egg-info
+    *.egg-info,
+    site-packages
 ignore =
     # whitespace before ':'  (conflicts with black-style alignment)
     E203,
